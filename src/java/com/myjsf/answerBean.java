@@ -6,7 +6,7 @@
 package com.myjsf;
 
 import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import java.io.Serializable;
 
 /**
@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @author 佐藤孝史
  */
 @Named(value = "answerBean")
-@SessionScoped
+@RequestScoped
 public class answerBean implements Serializable {
 
     String gender;

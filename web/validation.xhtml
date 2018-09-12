@@ -12,7 +12,7 @@
             <h:panelGrid columns="2">
                 <h:outputText value="性別"/>
                 <h:panelGrid columns="1">
-                <h:selectOneRadio value="#{answerBean.gender}">
+                    <h:selectOneRadio value="#{answerBean.gender}" required="true">
                     <f:selectItem itemValue="男性" itemLabel="男性"/>
                     <f:selectItem itemValue="女性" itemLabel="女性"/>
                 </h:selectOneRadio>
@@ -27,6 +27,10 @@
                     <h:inputText value="#{answerBean.brand}">
                         <f:validateLongRange minimum="1" maximum="6"/>
                     </h:inputText>
+                    <h:panelGrid columns="2">
+                        <h:commandButton type="submit" value="送信" action="questionnaireResult"/>
+                        <h:commandButton type="reset" value="キャンセル"/>
+                    </h:panelGrid>
                 </h:panelGrid>
             </h:panelGrid>
         </h:form>
